@@ -16,18 +16,7 @@ html {
     line-height: 1.4;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    
-}
 
-.div-1, .div-2, .div-3 {
-    display: flex;
-    width: 30%;
-    justify-content: center;
-    align-items: center;
-}
 
 
 /*
@@ -111,7 +100,7 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #77fa05;
   height: 100%;
 }
 
@@ -125,15 +114,29 @@ body {
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
   font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+  
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ 
+  color: #193401c5;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
+  font-size: 1em; 
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #58bb0178;
+  background-color: #58bb0178;;
 }
 
 
@@ -218,6 +221,23 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media all and (min-width: 1200px){
+    .wrapper{
+        flex-wrap: nowrap;
+    }
+
+
+
+    .div-1, .div-2, .div-3 {
+        height: 250px;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px;
+    }
+}
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
