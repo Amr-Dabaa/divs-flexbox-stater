@@ -100,44 +100,83 @@ textarea {
 
 
 html {
-  background-color: #77fa05;
-  height: 100%;
+    background-color: #77fa05;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0em 2em;
+    font-size: 1.25em;
+    color: #193401c5;
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  height: auto;
-  padding: 10px;
-  
+    /*add display:flex and set justify-content to space-between*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+
 }
 
-.div-1, .div-2, .div-3 {
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
- 
-  color: #193401c5;
-  line-height: 1.5em;
-  font-size: 1em; 
-  height: auto;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 2px solid #58bb0178;
-  background-color: #58bb0178;;
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
+
+header h1 {
+    font-family: 'Lora', sans-serif;
+    font-size: 3em;
+    color: #193401c5;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+}
+
+main p {
+    font-size: 1.35em;
+    margin-top: 0;
+}
+
+main span {
+    font-family: 'Lora', sans-serif;
+}
+
+.flex-div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1em;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #58bb0178;
+    background-color: #58bb0178;
+    ;
+}
+
+.flex-div span {
+    font-family: 'Lora', sans-serif;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer i {
+    padding: 20px 20px 0 0;
+  }
 
 
 
@@ -208,8 +247,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -221,14 +262,12 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media all and (min-width: 1200px){
-    .wrapper{
-        flex-wrap: nowrap;
-    }
+@media all and (min-width: 1200px) {
 
 
 
-    .div-1, .div-2, .div-3 {
+
+.flex-div{
         height: 250px;
         width: 30%;
         justify-content: center;
@@ -240,9 +279,9 @@ body {
 
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -253,11 +292,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
